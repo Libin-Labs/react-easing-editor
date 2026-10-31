@@ -1,0 +1,71 @@
+.lpe-editor {
+  --lpe-accent: #3859c7;
+  max-width: 500px;
+  font:
+    14px system-ui,
+    sans-serif;
+  color: #17213a;
+}
+.lpe-editor svg {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  touch-action: none;
+  background: #edf0f7;
+}
+.lpe-editor path {
+  fill: none;
+  stroke-width: 2;
+}
+.lpe-editor .lpe-axis,
+.lpe-editor .lpe-guide {
+  stroke: #9aa8bf;
+}
+.lpe-editor .lpe-curve {
+  stroke: var(--lpe-accent);
+}
+.lpe-editor circle {
+  fill: var(--lpe-accent);
+  cursor: grab;
+}
+.lpe-editor fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1px solid #bac3d5;
+}
+.lpe-editor label {
+  display: grid;
+  gap: 4px;
+  margin: 6px 0;
+}
+.lpe-editor input,
+.lpe-editor button {
+  font: inherit;
+  padding: 6px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.lpe-editor :focus-visible {
+  outline: 2px solid var(--lpe-accent);
+  outline-offset: 2px;
+}
+.lpe-editor .lpe-track {
+  margin: 16px 12px;
+  height: 24px;
+  background: #edf0f7;
+  position: relative;
+}
+.lpe-editor .lpe-track span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--lpe-accent);
+  transform: translateX(-50%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .lpe-editor .lpe-track span {
+    left: 0 !important;
+  }
+}
